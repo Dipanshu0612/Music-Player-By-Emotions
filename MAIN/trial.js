@@ -71,6 +71,8 @@ let happyImage = [
   "song-images\\happy\\Zindagi.jpg",
 ];
 
+let happyArtist=["Arijit Singh","Arijit Singh","Badshah, Neeti Mohan","Arijit Singh","Atif Aslam","Jubin nutyal","Arijit Singh, Shilpa Rao","Marron5","Raftar, Nindy Kuar","Arijit Singh","Arijit Singh", "jubin Nautial,shashwat Sach Dev","Arijit Singh","Badshah, Nikhita Gandhi","Arijit singh","Arijit Singh","Ellie Goulding","Salman Khan"," Badshah, Indeep Bakshi","Rabih Baroud, Neha Bhasin, Vishal Dadlani, Brigitte Yaghi","Devi Negi","A.R. Rahman, Badshah, Tanishk Bagchi, Shashaa Tirupati and Jubin Nautiyal","Jubin Nautiyal"]
+
 let sad = [
   "songs\\sad\\Dil Lauta Do.mp3",
   "songs\\sad\\Dil Tod Ke.mp3",
