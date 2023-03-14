@@ -11,7 +11,7 @@ import eel
 frequency = 2500
 duration = 1000
 
-eel.init('WD_INNOVATIVE')
+eel.init('MAIN')
 emotions = ["angry", "happy", "sad", "neutral"]
 fishface = cv2.face.FisherFaceRecognizer_create()
 font = cv2.FONT_HERSHEY_SIMPLEX
@@ -102,7 +102,7 @@ def identify_emotions():
         prediction.append(pred)
         confidence.append(conf)
     output = emotions[max(set(prediction), key=prediction.count)]
-    print("You seem to be %s" % output)
+    print("You look  %s" % output)
     facedict.clear()
     return output
 
@@ -123,5 +123,4 @@ def getEmotion():
             fishface.read("model.xml")
             return identify_emotions()
 
-
-eel.start('main.html')
+eel.start('trial.html', mode='default')
