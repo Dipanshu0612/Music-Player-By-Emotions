@@ -1,82 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Music Player by Emotions</title>
-    <link rel="stylesheet" href="trial.css">
-	<script type="text/javascript" src="eel.js"></script>
-    <script src="https://kit.fontawesome.com/968172cca8.js" crossorigin="anonymous"></script>
-</head>
-<body>
-    
+    <link rel="stylesheet" href="trial.css" />
+    <script type="text/javascript" src="eel.js"></script>
+    <script
+      src="https://kit.fontawesome.com/968172cca8.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
     <header class="header">
-        <h2 class="heading">Music Player</h2>
+      <h2 class="heading">Music Player</h2>
 
-        <navbar class="nav">
-            <a href="#home" class="list-item active">Home</a>
-            <a href="#player" class="list-item">Player</a>
-            <a href="#contact" class="list-item">Contact</a>
-        </navbar>
-        <button class="menubtn">
+      <navbar class="nav">
+        <a href="#home" class="list-item active">Home</a>
+        <a href="#player" class="list-item">Player</a>
+        <a href="#contact" class="list-item">Contact</a>
+      </navbar>
+      <button class="menubtn">
         <i class="fa-solid fa-bars"></i>
-        </button>
+      </button>
     </header>
 
     <section class="home" id="home">
-        <div class="line1">
-            Welcome to our
-        </div>
-        <div class="mainline">
-            Music Player 
-        </div>
+      <div class="line1">Welcome to our</div>
+      <div class="mainline">Music Player</div>
 
-        <a href="#player" class="btn">Launch Player</a>
+      <a href="#player" class="btn">Launch Player</a>
     </section>
 
     <section class="player" id="player">
-        
-        <div class="MainCont">
-            <div class="imgCont imgnone">
-                <img src="" alt="">
-            </div>
-            <div class="song-info">
-                <h1 id="song-name">-----------</h1>
-                <h3 id="singer">-------------------</h3>
-            </div>
-            <div class="btns">
-                <button class="btn"><i class="fa-solid fa-backward-step"></i></button>
-                <button class="btn" onclick="playstop()"><i class="fa-solid fa-play" id="icon"></i></button>
-                <button class="btn"><i class="fa-solid fa-forward-step"></i></button>
-            </div>
-
-            <div class="mainbtns">
-                <button class="btn" onclick="random_play()">Random Song</button>
-                <button class="btn" onclick="emotionplay()">By Emotion Check</button>
-            </div>
-            <div class="mood">
-
-            </div>
-
-            
+      <div class="MainCont">
+        <div class="imgCont imgnone">
+          <img src="" alt="" />
         </div>
-        <div class="musicgif" id="musicgif">
-            <pre>
-
-
-
-
-
-            </pre>
+        <div class="song-info">
+          <h1 id="song-name">-----------</h1>
+          <h3 id="singer">-------------------</h3>
+        </div>
+        <div class="btns">
+          <button class="btn"><i class="fa-solid fa-backward-step"></i></button>
+          <button class="btn" onclick="playstop()">
+            <i class="fa-solid fa-play" id="icon"></i>
+          </button>
+          <button class="btn"><i class="fa-solid fa-forward-step"></i></button>
         </div>
 
-
+        <div class="mainbtns">
+          <button class="btn" onclick="random_play()">Random Song</button>
+          <button class="btn" onclick="emotionplay()">By Emotion Check</button>
+        </div>
+        <div class="mood"></div>
+      </div>
+      <div class="musicgif" id="musicgif">
+        <pre></pre>
+      </div>
     </section>
-    
 
     <script src="trial.js"></script>
-    <script src="https://kit.fontawesome.com/968172cca8.js" crossorigin="anonymous"></script>
-
-</body>
+    <script
+      src="https://kit.fontawesome.com/968172cca8.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
