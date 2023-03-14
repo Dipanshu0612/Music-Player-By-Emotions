@@ -127,20 +127,20 @@ let sadImage = [
 
 let sadArtist = [
   "Jubin Nautiyal, Payal Dev",
-  "B Prak",
+  "B Praak",
   "Darshan Raval",
-  "Akshay Kumar, Nupur Sanon",
+  "B Praak, Jaani",
   "Jubin Nautiyal",
-  "Arijit Tulsi",
-  "Shershah",
+  "Arijit Singh, Tulsi Kumar",
+  "B Praak, Jaani",
   "Arijit Singh",
   "Jubin Nautiyal",
   "Arijit Singh",
-  "Gajendra Verma, Karishima Sharma",
+  "Gajendra Verma",
   "Jubin Nautiyal",
-  "Jubin Nautiyal, Payal Dave",
-  "Krishan Kumar",
-  "Prabhas, Pooja H",
+  "Jubin Nautiyal",
+  "Jubin Nautiyal",
+  "Manan Bharadwaj",
 ];
 
 let angry = [
