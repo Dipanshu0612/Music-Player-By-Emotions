@@ -255,10 +255,10 @@ function emotionplay() {
         let obj=Math.ceil(Math.random() * 8);
         const New = new Audio(happy[obj]);
         New.play();
-        left=obj-1
-        right=obj+1
         songname.innerText=happySongName[obj];
         singer.innerText=happyArtist[obj];
+        left=obj-1
+        right=obj+1
         icon.classList.add("fa-pause");
         icon.classList.remove("fa-play");
         curr_song.push(New);
@@ -267,10 +267,10 @@ function emotionplay() {
         let obj=Math.ceil(Math.random() * 8);
         const New = new Audio(happy[obj]);
         New.play();
-        left=obj-1
-        right=obj+1
         songname.innerText=happySongName[obj];
         singer.innerText=happyArtist[obj];
+        left=obj-1
+        right=obj+1
         icon.classList.add("fa-pause");
         icon.classList.remove("fa-play");
         curr_song.push(New);
@@ -284,10 +284,10 @@ function emotionplay() {
         let obj=Math.ceil(Math.random() * 3);
         const New = new Audio(sad[obj]);
         New.play();
-        left=obj-1
-        right=obj+1
         songname.innerText=sadSongName[obj];
         singer.innerText=sadArtist[obj];
+        left=obj-1
+        right=obj+1
         icon.classList.add("fa-pause");
         icon.classList.remove("fa-play");
         curr_song.push(New);
@@ -296,10 +296,10 @@ function emotionplay() {
         let obj=Math.ceil(Math.random() * 3);
         const New = new Audio(sad[obj]);
         New.play();
-        left=obj-1
-        right=obj+1
         songname.innerText=sadSongName[obj];
         singer.innerText=sadArtist[obj];
+        left=obj-1
+        right=obj+1
         icon.classList.add("fa-pause");
         icon.classList.remove("fa-play");
         document.getElementById("musicgif").style.display = "block";
@@ -314,10 +314,10 @@ function emotionplay() {
         let obj=Math.ceil(Math.random() * 2);
         const New = new Audio(angry[obj]);
         New.play();
-        left=obj-1
-        right=obj+1
         songname.innerText=angrySongName[obj];
         singer.innerText=angryArtist[obj];
+        left=obj-1
+        right=obj+1
         icon.classList.add("fa-pause");
         icon.classList.remove("fa-play");
         curr_song.push(New);
@@ -326,10 +326,10 @@ function emotionplay() {
         let obj=Math.ceil(Math.random() * 2);
         const New = new Audio(angry[obj]);
         New.play();
-        left=obj-1
-        right=obj+1
         songname.innerText=angrySongName[obj];
         singer.innerText=angryArtist[obj];
+        left=obj-1
+        right=obj+1
         icon.classList.add("fa-pause");
         icon.classList.remove("fa-play");
         curr_song.push(New);
