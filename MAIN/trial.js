@@ -266,6 +266,8 @@ function playstop() {
 
 function emotionplay() {
     alert("The camera will now take your picture to detect your emotion. Stand/Sit Still!");
+    document.getElementsByClassName("mood")[0].innerHTML ="Analyzing your emotion... Plesse Wait!"
+
     let mood = getmood().then(function (e) {
         console.log(e);
         document.getElementsByClassName("mood")[0].innerHTML =
