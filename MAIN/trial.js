@@ -15,11 +15,11 @@ let happy = [
   "songs\\happy\\Kesariya.mp3",
   "songs\\happy\\Khairiyat.mp3",
   "songs\\happy\\Love Me Like You Do.mp3",
-  "songs\\happy\\Mai Hoon Sath Tere.mp3",
+  "songs\\happy\\Main Hoon Sath Tere.mp3",
   "songs\\happy\\Saturday Saturday.mp3",
   "songs\\happy\\Swag Se Swagat.mp3",
   "songs\\happy\\Sweetheart.mp3",
-  "songs\\happy\\The Humma Humma Song.mp3",
+  "songs\\happy\\The Humma Song.mp3",
   "songs\\happy\\Zindagi.mp3",
 ];
 
@@ -74,7 +74,7 @@ let happyImage = [
 let happyArtist=["Arijit Singh","Arijit Singh","Badshah, Neeti Mohan","Atif Aslam","Jubin Nautiyal","Arijit Singh, Shilpa Rao","Marron5 ft. Cardi B","Raftaar, Nindy Kuar","Arijit Singh","Arijit Singh", "Jubin Nautiyal,Shashwat Sach Dev","Arijit Singh","Badshah, Nikhita Gandhi","Arijit Singh","Arijit Singh","Ellie Goulding","Arijit Singh"," Badshah, Indeep Bakshi","Neha Bhasin, Vishal Dadlani","Devi Negi","A.R. Rahman, Badshah, Tanishk Bagchi, Shashaa Tirupati and Jubin Nautiyal","Jubin Nautiyal"]
 
 let sad = [
-  "songs\\sad\\Dil Lauta Do.mp3",
+  "songs\\sad\\Dil Lauta Do Song.mp3",
   "songs\\sad\\Dil Tod Ke.mp3",
   "songs\\sad\\Ek Tarfa Reprise.mp3",
   "songs\\sad\\Filhall.mp3",
@@ -184,10 +184,11 @@ let songname = document.getElementById("song-name");
 let singer = document.getElementById("singer");
 
 let curr_song = [];
-
 let New;
 let icon = document.getElementById("icon");
 
+
+console.log('Hello');
 function random_play() {
   if (curr_song[0] != null) {
     curr_song[0].pause();
@@ -314,9 +315,6 @@ async function getmood() {
   let mood = await eel.getEmotion()();
   return mood;
 }
-
-    let mood = await eel.getEmotion()();
-    return mood;
 
 
 
