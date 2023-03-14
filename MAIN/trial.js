@@ -1,13 +1,13 @@
-let happy = ["songs\\happy\\Aaj Se Teri.mp3","songs\\happy\\Apna Bana Le.mp3","songs\\happy\\Bad Boy.mp3","songs\\happy\\Dil Diyan Gallan.mp3","songs\\happy\\Dil Galti Kar Baitha Hai.mp3","songs\\happy\\Ghungroo.mp3","songs\\happy\\Girls Like You.mp3","songs\\happy\\Go Pagal.mp3","songs\\happy\\Haan Mai Galat.mp3","songs\\happy\\Hawayein.mp3","songs\\happy\\Ik Tu Hai.mp3","songs\\happy\\Ik Vaari Aa.mp3","songs\\happy\\Jugnu.mp3","songs\\happy\\Kesariya.mp3","songs\\happy\\Khairiyat.mp3","songs\\happy\\Love Me Like You Do.mp3","songs\\happy\\Mai Hoon Sath Tere.mp3","songs\\happy\\Saturday Saturday.mp3","songs\\happy\\Swag Se Swagat.mp3","songs\\happy\\Sweetheart.mp3","songs\\happy\\The Humma Humma Song.mp3","songs\\happy\\Zindagi.mp3"]
+let happy = ["songs\\happy\\Aaj Se Teri.mp3","songs\\happy\\Apna Bana Le.mp3","songs\\happy\\Bad Boy.mp3","songs\\happy\\Dil Diyan Gallan.mp3","songs\\happy\\Dil Galti Kar Baitha Hai.mp3","songs\\happy\\Ghungroo.mp3","songs\\happy\\Girls Like You.mp3","songs\\happy\\Go Pagal.mp3","songs\\happy\\Haan Main Galat.mp3","songs\\happy\\Hawayein.mp3","songs\\happy\\Ik Tu Hai.mp3","songs\\happy\\Ik Vaari Aa.mp3","songs\\happy\\Jugnu.mp3","songs\\happy\\Kesariya.mp3","songs\\happy\\Khairiyat.mp3","songs\\happy\\Love Me Like You Do.mp3","songs\\happy\\Mai Hoon Sath Tere.mp3","songs\\happy\\Saturday Saturday.mp3","songs\\happy\\Swag Se Swagat.mp3","songs\\happy\\Sweetheart.mp3","songs\\happy\\The Humma Humma Song.mp3","songs\\happy\\Zindagi.mp3"]
 
-let happySongName=["Aaj Se Teri","Apna Bana Le","Bad Boy",'Dil Diyan Gallan',"Dil Galti Kar Baitha Hai","Ghungroo","Girls Like You","Go Pagal","Haan Mai Galat","Hawayein","Ik Tu Hai","Ik Vaari Aa","Jugnu","Kesariya","Khairiyat","Love Me Like You Do","Mai Hoon Sath Tere","Saturday Saturday","Swag Se Swagat","Swag Se Swagat","Sweetheart","The Humma Humma Song","Zindagi"];
+let happySongName=["Aaj Se Teri","Apna Bana Le","Bad Boy",'Dil Diyan Gallan',"Dil Galti Kar Baitha Hai","Ghungroo","Girls Like You","Go Pagal","Haan Mai Galat","Hawayein","Ik Tu Hai","Ik Vaari Aa","Jugnu","Kesariya","Khairiyat","Love Me Like You Do","Mai Hoon Sath Tere","Saturday Saturday","Swag Se Swagat","Sweetheart","The Humma Humma Song","Zindagi"];
 
 let happyImage=["song-images\\happy\\Aaj se teri.jpg","song-images\\happy\\Apna Bana le.jpg","song-images\\happy\\Bad Boy.jpg","song-images\\happy\\Dil Diyan Gallan.jpg","song-images\\happy\\Ghungroo.jpg","song-images\\happy\\Girls Like You.jpg","song-images\\happy\\Haan Mai Galat.jpg","song-images\\happy\\Hawaiyen.jpg","song-images\\happy\\Humma Humma.jpg","song-images\\happy\\Ik Tu Hai.jpg","song-images\\happy\\Ik Varri Aa.jpg","song-images\\happy\\Jugnu.jpg","song-images\\happy\\Kesariya.jpg","song-images\\happy\\Khairiyat.jpg","song-images\\happy\\Love Me like you do.jpg","song-images\\happy\\Mai Hoon Sath Tere.jpg","song-images\\happy\\Swag Se Swagat.jpg","song-images\\happy\\SweetHeart.jpg","song-images\\happy\\Zindagi.jpg"];
 
 
 
 
-let sad = ["songs\\sad\\Dil Lauta Do.mp3","songs\\sad\\Dil Tod Ke.mp3","songs\\sad\\Ek Tarfa Reprise.mp3","songs\\sad\\Filhall.mp3","songs\\sad\\Humnava Mere.mp3","songs\\sad\\Mahi Mera Dil.mp3","songs\\sad\\Man Bharya 2.mp3","songs\\sad\\Phir Bhi Tumko Chahunga.mp3","songs\\sad\\Phir Se Zara.mp3","songs\\sad\\Roke Na Ruke Naina.mp3","songs\\sad\\Tera Ghata.mp3","songs\\sad\\Tujhe Kitna Chahein Aur.mp3","songs\\sad\\Tum Hi Aana.mp3","songs\\sad\\Wafa Na Raas Aayee.mp3","songs\\sad\\Ye Ishq Na Ho.mp3",]
+let sad = ["songs\\sad\\Dil Lauta Do.mp3","songs\\sad\\Dil Tod Ke.mp3","songs\\sad\\Ek Tarfa Reprise.mp3","songs\\sad\\Filhall.mp3","songs\\sad\\Humnava Mere.mp3","songs\\sad\\Mahi Mera Dil.mp3","songs\\sad\\Man Bharya 2.mp3","songs\\sad\\Phir Bhi Tumko Chahunga.mp3","songs\\sad\\Phir Se Zara.mp3","songs\\sad\\Roke Na Ruke Naina.mp3","songs\\sad\\Tera Ghata.mp3","songs\\sad\\Tujhe Kitna Chahein Aur.mp3","songs\\sad\\Tum Hi Aana.mp3","songs\\sad\\Wafa Na Raas Aayee.mp3","songs\\sad\\Ye Ishq Na Ho.mp3"]
 
 let sadSongName=["Dil Lauta Do","Dil Tod Ke","Ek Tarfa Reprise","Filhall","Humnava Mere","Mahi Mera Dil","Mann Bharaya 2.0","Phir Bhi Tumko Chahunga","Phir Se Zara","Roke Na Ruke Naina","Tera Ghata","Tujhe Kitna Chahein Aur","Tum Hi Aana","Wafa Na Raas Aayee","Ye Ishq Na Ho"]
 
@@ -24,7 +24,7 @@ let angryImage=["song-images\\angry\\apna time aaega.jpeg","song-images\\angry\\
 
 
 
-let allSongs = [...angry, ...happy, ...sad]
+let allSongs = [...angry,...happy,...sad]
 
 let allimages=[...angryImage,...happyImage,...sadImage];
 
@@ -45,10 +45,12 @@ function random_play() {
         curr_song[0].pause();
         document.getElementById('musicgif').style.display='none';
         curr_song.pop();
-        let obj=Math.ceil(Math.random() * (allSongs.length))
+        let obj=Math.floor(Math.random() * (allSongs.length))
         New = new Audio(allSongs[obj])
+        console.log(allSongs[obj] + obj)
         New.play();
         songname.innerText=allSongName[obj];
+        console.log(allSongName[obj] + obj)
         icon.classList.add("fa-pause");
         icon.classList.remove("fa-play");
         curr_song.push(New);
@@ -56,7 +58,7 @@ function random_play() {
 
     }
     else {
-        let obj=Math.ceil(Math.random() * (allSongs.length))
+        let obj=Math.floor(Math.random() * (allSongs.length))
         New = new Audio(allSongs[obj])
         New.play();
         songname.innerText=allSongName[obj];
@@ -97,16 +99,20 @@ function emotionplay() {
                 curr_song[0].pause();
                 document.getElementById('musicgif').style.display='none';
                 curr_song.pop();
-                const New = new Audio(happy[Math.ceil(Math.random() * 8)])
+                let obj=Math.floor(Math.random() * 8);
+                const New = new Audio(happy[obj])
                 New.play();
+                songname.innerText=happySongName[obj];
                 icon.classList.add("fa-pause");
                 icon.classList.remove("fa-play");
                 curr_song.push(New);
                 document.getElementById('musicgif').style.display='block';
             }
             else{
-                const New = new Audio(happy[Math.ceil(Math.random() * 8)])
+                let obj=Math.floor(Math.random() * 8);
+                const New = new Audio(happy[obj])
                 New.play();
+                songname.innerText=happySongName[obj];
                 icon.classList.add("fa-pause");
                 icon.classList.remove("fa-play");
                 curr_song.push(New);
@@ -119,8 +125,10 @@ function emotionplay() {
                 curr_song[0].pause();
                 curr_song.pop();
                 document.getElementById('musicgif').style.display='none';
-                const New = new Audio(sad[Math.ceil(Math.random() * 3)])
+                let obj=Math.floor(Math.random() * 3);
+                const New = new Audio(sad[obj])
                 New.play();
+                songname.innerText=sadSongName[obj];
                 icon.classList.add("fa-pause");
                 icon.classList.remove("fa-play");
                 curr_song.push(New);
@@ -128,8 +136,10 @@ function emotionplay() {
 
             }
             else{
-                const New = new Audio(sad[Math.ceil(Math.random() * 3)])
+                let obj=Math.floor(Math.random() * 3);
+                const New = new Audio(sad[obj])
                 New.play();
+                songname.innerText=sadSongName[obj];
                 icon.classList.add("fa-pause");
                 icon.classList.remove("fa-play");
                 document.getElementById('musicgif').style.display='block';
@@ -142,16 +152,20 @@ function emotionplay() {
                 curr_song[0].pause();
                 curr_song.pop();
                 document.getElementById('musicgif').style.display='none';
-                const New = new Audio(angry[Math.ceil(Math.random() * 2)])
+                let obj=Math.floor(Math.random() * 2);
+                const New = new Audio(angry[obj])
                 New.play();
+                songname.innerText=angrySongName[obj];
                 icon.classList.add("fa-pause");
                 icon.classList.remove("fa-play");
                 curr_song.push(New);
                 document.getElementById('musicgif').style.display='block';
             }
             else{
-                const New = new Audio(angry[Math.ceil(Math.random() * 2)])
+                let obj=Math.floor(Math.random() * 2);
+                const New = new Audio(angry[obj])
                 New.play();
+                songname.innerText=angrySongName[obj];
                 icon.classList.add("fa-pause");
                 icon.classList.remove("fa-play");
                 curr_song.push(New);
@@ -159,6 +173,9 @@ function emotionplay() {
 
             }
             
+        }
+        else if (e== "neutral"){
+            random_play();
         }
     }
     );
@@ -168,3 +185,8 @@ async function getmood() {
     let mood = await eel.getEmotion()();
     return mood;
 }
+
+
+// for(i=0;i<allSongName.length;i++){
+//     if allSongs[i].contains()
+// }
