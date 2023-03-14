@@ -23,7 +23,7 @@ parser.add_argument(
 args = parser.parse_args()
 facedict = {}
 video_capture = cv2.VideoCapture(0)
-facecascade = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
+facecascade = cv2.CascadeClassifier("Other/haarcascade_frontalface_default.xml")
 
 
 def crop(clahe_image, face):
@@ -46,8 +46,7 @@ def grab_face():
 
 def detect_face():
     clahe_image = grab_face()
-    face = facecascade.detectMultiScale(clahe_image, scaleFactor=1.1, minNeighbors=15, minSize=(
-        10, 10), flags=cv2.CASCADE_SCALE_IMAGE)
+    face = facecascade.detectMultiScale(clahe_image, scaleFactor=1.1, minNeighbors=15, minSize=(10, 10), flags=cv2.CASCADE_SCALE_IMAGE)
     if len(face) >= 1:
         faceslice = crop(clahe_image, face)
     else:
@@ -120,7 +119,7 @@ def getEmotion():
             update_model(emotions)
             break
         elif count == 10:
-            fishface.read("model.xml")
+            fishface.read("Other/model.xml")
             return identify_emotions()
 
 eel.start('trial.html', mode='default')
