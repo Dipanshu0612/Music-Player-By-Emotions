@@ -1,10 +1,38 @@
-let happy = ["songs\\happy\\ban ja rani.mp3", "songs\\happy\\Garmi.mp3", "songs\\happy\\ik vari aa.mp3", "songs\\happy\\Jeda Nasha.mp3", "songs\\happy\\Muqabla.mp3", "songs\\happy\\o sathi.mp3", "songs\\happy\\rabta.mp3", "songs\\happy\\suit suit.mp3"]
+let happy = ["songs\\happy\\Aaj Se Teri.mp3","songs\\happy\\Apna Bana Le.mp3","songs\\happy\\Bad Boy.mp3","songs\\happy\\Dil Diyan Gallan.mp3","songs\\happy\\Dil Galti Kar Baitha Hai.mp3","songs\\happy\\Ghungroo.mp3","songs\\happy\\Girls Like You.mp3","songs\\happy\\Go Pagal.mp3","songs\\happy\\Haan Mai Galat.mp3","songs\\happy\\Hawayein.mp3","songs\\happy\\Ik Tu Hai.mp3","songs\\happy\\Ik Vaari Aa.mp3","songs\\happy\\Jugnu.mp3","songs\\happy\\Kesariya.mp3","songs\\happy\\Khairiyat.mp3","songs\\happy\\Love Me Like You Do.mp3","songs\\happy\\Mai Hoon Sath Tere.mp3","songs\\happy\\Saturday Saturday.mp3","songs\\happy\\Swag Se Swagat.mp3","songs\\happy\\Sweetheart.mp3","songs\\happy\\The Humma Humma Song.mp3","songs\\happy\\Zindagi.mp3"]
 
-let sad = ["songs\\Banduk meri laila.mp3", "songs\\mercy.mp3", "songs\\musafir.mp3"]
+let happySongName=["Aaj Se Teri","Apna Bana Le","Bad Boy",'Dil Diyan Gallan',"Dil Galti Kar Baitha Hai","Ghungroo","Girls Like You","Go Pagal","Haan Mai Galat","Hawayein","Ik Tu Hai","Ik Vaari Aa","Jugnu","Kesariya","Khairiyat","Love Me Like You Do","Mai Hoon Sath Tere","Saturday Saturday","Swag Se Swagat","Swag Se Swagat","Sweetheart","The Humma Humma Song","Zindagi"];
 
-let angry = ["songs\\angry\\Bulleya.mp3", "songs\\angry\\Dua Karo.mp3"]
+let happyImage=["song-images\\happy\\Aaj se teri.jpg","song-images\\happy\\Apna Bana le.jpg","song-images\\happy\\Bad Boy.jpg","song-images\\happy\\Dil Diyan Gallan.jpg","song-images\\happy\\Ghungroo.jpg","song-images\\happy\\Girls Like You.jpg","song-images\\happy\\Haan Mai Galat.jpg","song-images\\happy\\Hawaiyen.jpg","song-images\\happy\\Humma Humma.jpg","song-images\\happy\\Ik Tu Hai.jpg","song-images\\happy\\Ik Varri Aa.jpg","song-images\\happy\\Jugnu.jpg","song-images\\happy\\Kesariya.jpg","song-images\\happy\\Khairiyat.jpg","song-images\\happy\\Love Me like you do.jpg","song-images\\happy\\Mai Hoon Sath Tere.jpg","song-images\\happy\\Swag Se Swagat.jpg","song-images\\happy\\SweetHeart.jpg","song-images\\happy\\Zindagi.jpg"];
+
+
+
+
+let sad = ["songs\\sad\\Dil Lauta Do.mp3","songs\\sad\\Dil Tod Ke.mp3","songs\\sad\\Ek Tarfa Reprise.mp3","songs\\sad\\Filhall.mp3","songs\\sad\\Humnava Mere.mp3","songs\\sad\\Mahi Mera Dil.mp3","songs\\sad\\Man Bharya 2.mp3","songs\\sad\\Phir Bhi Tumko Chahunga.mp3","songs\\sad\\Phir Se Zara.mp3","songs\\sad\\Roke Na Ruke Naina.mp3","songs\\sad\\Tera Ghata.mp3","songs\\sad\\Tujhe Kitna Chahein Aur.mp3","songs\\sad\\Tum Hi Aana.mp3","songs\\sad\\Wafa Na Raas Aayee.mp3","songs\\sad\\Ye Ishq Na Ho.mp3",]
+
+let sadSongName=["Dil Lauta Do","Dil Tod Ke","Ek Tarfa Reprise","Filhall","Humnava Mere","Mahi Mera Dil","Mann Bharaya 2.0","Phir Bhi Tumko Chahunga","Phir Se Zara","Roke Na Ruke Naina","Tera Ghata","Tujhe Kitna Chahein Aur","Tum Hi Aana","Wafa Na Raas Aayee","Ye Ishq Na Ho"]
+
+let sadImage=["song-images\\sad\\Dil Lauta Do.jpg","song-images\\sad\\Dil Tod Ke.jpg","song-images\\sad\\Ek Tarfa Reprise.jpg","song-images\\sad\\Filhall.jpg","song-images\\sad\\Humnava Mere.jpg","song-images\\sad\\Maahi Mera Dil.jpg","song-images\\sad\\Maan Bharaya.jpg","song-images\\sad\\Phir Bhi Tum Ko.jpg","song-images\\sad\\Phir Se Zara.jpg","song-images\\sad\\Roke na Ruke Naina.jpg","song-images\\sad\\Tera Ghata.jpg","song-images\\sad\\Tujhe Kitna.jpg","song-images\\sad\\Tum hi aana.jpg","song-images\\sad\\Wafa Na.jpg","song-images\\sad\\Ye Ishq na ho.jpg"];
+
+
+
+let angry = ["songs\\angry\\Apna Time Aaega.mp3","songs\\angry\\BamBholle.mp3","songs\\angry\\Bulleya.mp3","songs\\angry\\Dua Karo.mp3", "songs\\angry\\Get Ready To Fight Again.mp3"]
+
+
+let angrySongName=["Apna Time Aaega","BamBholle","Bulleya","Dua Karo","Get Ready To Fight Again"];
+
+let angryImage=["song-images\\angry\\apna time aaega.jpeg","song-images\\angry\\Baaghi2.jpg","song-images\\angry\\bambholle.jpg","song-images\\angry\\Bulleya.jpg","song-images\\angry\\Dua Karo.jpeg"];
+
+
 
 let allSongs = [...angry, ...happy, ...sad]
+
+let allimages=[...angryImage,...happyImage,...sadImage];
+
+let allSongName=[...angrySongName,...happySongName,...sadSongName];
+
+
+let songname=document.getElementById('song-name');
+let singer=document.getElementById('singer');
 
 let curr_song = [];
 
@@ -17,8 +45,10 @@ function random_play() {
         curr_song[0].pause();
         document.getElementById('musicgif').style.display='none';
         curr_song.pop();
-        New = new Audio(allSongs[Math.ceil(Math.random() * (allSongs.length))])
+        let obj=Math.ceil(Math.random() * (allSongs.length))
+        New = new Audio(allSongs[obj])
         New.play();
+        songname.innerText=allSongName[obj];
         icon.classList.add("fa-pause");
         icon.classList.remove("fa-play");
         curr_song.push(New);
@@ -26,8 +56,10 @@ function random_play() {
 
     }
     else {
-        New = new Audio(allSongs[Math.ceil(Math.random() * (allSongs.length))])
+        let obj=Math.ceil(Math.random() * (allSongs.length))
+        New = new Audio(allSongs[obj])
         New.play();
+        songname.innerText=allSongName[obj];
         icon.classList.add("fa-pause");
         icon.classList.remove("fa-play");
         curr_song.push(New);
