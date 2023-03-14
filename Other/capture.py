@@ -122,4 +122,4 @@ def getEmotion():
             fishface.read("Other/model.xml")
             return identify_emotions()
 
-eel.start('trial.html', mode='default')
+eel.start('MAIN/trial.html', mode='default')
