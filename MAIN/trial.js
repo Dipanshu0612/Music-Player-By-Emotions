@@ -185,7 +185,11 @@ let singer = document.getElementById("singer");
 
 let curr_song = [];
 let New;
+let left;
+let right;
 let icon = document.getElementById("icon");
+
+let mainImage=document.getElementById('mainImage');
 
 
 console.log('Hello');
@@ -197,8 +201,11 @@ function random_play() {
     let obj = Math.ceil(Math.random() * allSongs.length);
     New = new Audio(allSongs[obj]);
     New.play();
+    left=obj-1
+    right=obj+1
     songname.innerText = allSongName[obj];
     singer.innerText=allSingers[obj];
+    mainImage.src=`${allimages[obj]}`;
     icon.classList.add("fa-pause");
     icon.classList.remove("fa-play");
     curr_song.push(New);
@@ -207,8 +214,11 @@ function random_play() {
     let obj = Math.ceil(Math.random() * allSongs.length);
     New = new Audio(allSongs[obj]);
     New.play();
+    left=obj-1
+    right=obj+1
     songname.innerText = allSongName[obj];
     singer.innerText=allSingers[obj];
+    mainImage.src=`${allimages[obj]}`;
     icon.classList.add("fa-pause");
     icon.classList.remove("fa-play");
     curr_song.push(New);
@@ -242,8 +252,11 @@ function emotionplay() {
         curr_song[0].pause();
         document.getElementById("musicgif").style.display = "none";
         curr_song.pop();
-        const New = new Audio(happy[Math.ceil(Math.random() * 8)]);
+        let obj=Math.ceil(Math.random() * 8);
+        const New = new Audio(happy[obj]);
         New.play();
+        left=obj-1
+        right=obj+1
         songname.innerText=happySongName[obj];
         singer.innerText=happyArtist[obj];
         icon.classList.add("fa-pause");
@@ -251,8 +264,11 @@ function emotionplay() {
         curr_song.push(New);
         document.getElementById("musicgif").style.display = "block";
       } else {
-        const New = new Audio(happy[Math.ceil(Math.random() * 8)]);
+        let obj=Math.ceil(Math.random() * 8);
+        const New = new Audio(happy[obj]);
         New.play();
+        left=obj-1
+        right=obj+1
         songname.innerText=happySongName[obj];
         singer.innerText=happyArtist[obj];
         icon.classList.add("fa-pause");
@@ -265,8 +281,11 @@ function emotionplay() {
         curr_song[0].pause();
         curr_song.pop();
         document.getElementById("musicgif").style.display = "none";
-        const New = new Audio(sad[Math.ceil(Math.random() * 3)]);
+        let obj=Math.ceil(Math.random() * 3);
+        const New = new Audio(sad[obj]);
         New.play();
+        left=obj-1
+        right=obj+1
         songname.innerText=sadSongName[obj];
         singer.innerText=sadArtist[obj];
         icon.classList.add("fa-pause");
@@ -274,8 +293,11 @@ function emotionplay() {
         curr_song.push(New);
         document.getElementById("musicgif").style.display = "block";
       } else {
-        const New = new Audio(sad[Math.ceil(Math.random() * 3)]);
+        let obj=Math.ceil(Math.random() * 3);
+        const New = new Audio(sad[obj]);
         New.play();
+        left=obj-1
+        right=obj+1
         songname.innerText=sadSongName[obj];
         singer.innerText=sadArtist[obj];
         icon.classList.add("fa-pause");
@@ -289,8 +311,11 @@ function emotionplay() {
         curr_song[0].pause();
         curr_song.pop();
         document.getElementById("musicgif").style.display = "none";
-        const New = new Audio(angry[Math.ceil(Math.random() * 2)]);
+        let obj=Math.ceil(Math.random() * 2);
+        const New = new Audio(angry[obj]);
         New.play();
+        left=obj-1
+        right=obj+1
         songname.innerText=angrySongName[obj];
         singer.innerText=angryArtist[obj];
         icon.classList.add("fa-pause");
@@ -298,8 +323,11 @@ function emotionplay() {
         curr_song.push(New);
         document.getElementById("musicgif").style.display = "block";
       } else {
-        const New = new Audio(angry[Math.ceil(Math.random() * 2)]);
+        let obj=Math.ceil(Math.random() * 2);
+        const New = new Audio(angry[obj]);
         New.play();
+        left=obj-1
+        right=obj+1
         songname.innerText=angrySongName[obj];
         singer.innerText=angryArtist[obj];
         icon.classList.add("fa-pause");
@@ -316,6 +344,67 @@ async function getmood() {
   return mood;
 }
 
+
+function playprev(){
+    if (curr_song[0] != null) {
+        curr_song[0].pause();
+        curr_song.pop();
+        document.getElementById("musicgif").style.display = "none";
+        const New=new Audio(allSongs[left]);
+        New.play();
+        songname.innerText=allSongName[left];
+        singer.innerText=allSingers[left];
+        left=left-1
+        right=left+1
+        icon.classList.add("fa-pause");
+        icon.classList.remove("fa-play");
+        curr_song.push(New);
+        document.getElementById("musicgif").style.display = "block";
+    }
+    else{
+        const New=new Audio(allSongs[left]);
+        New.play();
+        songname.innerText=allSongName[left];
+        singer.innerText=allSingers[left];
+        left=left-1
+        right=left+1
+        icon.classList.add("fa-pause");
+        icon.classList.remove("fa-play");
+        curr_song.push(New);
+        document.getElementById("musicgif").style.display = "block";
+    }
+}
+function playnext(){
+    if (curr_song[0] != null) {
+        curr_song[0].pause();
+        curr_song.pop();
+        document.getElementById("musicgif").style.display = "none";
+        const New=new Audio(allSongs[right]);
+        New.play();
+        songname.innerText=allSongName[right];
+        singer.innerText=allSingers[right];
+        left=right-1
+        right=right+1
+        icon.classList.add("fa-pause");
+        icon.classList.remove("fa-play");
+        curr_song.push(New);
+        document.getElementById("musicgif").style.display = "block";
+    }
+    else{
+        const New=new Audio(allSongs[right]);
+        New.play();
+        songname.innerText=allSongName[right];
+        singer.innerText=allSingers[obj];
+        left=right-1
+        right=right+1
+        icon.classList.add("fa-pause");
+        icon.classList.remove("fa-play");
+        curr_song.push(New);
+        document.getElementById("musicgif").style.display = "block";
+    }
+
+
+}
 
 
 

@@ -144,3 +144,7 @@ section{
 #player{
     max-height: 100vh;
 }
+
+.btns button{
+    margin :1rem 1rem;
+}

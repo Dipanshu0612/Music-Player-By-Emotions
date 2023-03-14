@@ -19,7 +19,6 @@
       <navbar class="nav">
         <a href="#home" class="list-item active">Home</a>
         <a href="#player" class="list-item">Player</a>
-        <a href="#contact" class="list-item">Contact</a>
       </navbar>
       <button class="menubtn">
         <i class="fa-solid fa-bars"></i>
@@ -37,18 +36,18 @@
         
         <div class="MainCont">
             <div class="imgCont imgnone">
-                <img src="" alt="">
+                <img src="" alt="" id="mainImage">
             </div>
         <div class="song-info">
           <h1 id="song-name">-----------</h1>
           <h3 id="singer">-------------------</h3>
         </div>
         <div class="btns">
-          <button class="btn"><i class="fa-solid fa-backward-step"></i></button>
+          <button class="btn" onclick="playprev()"><i class="fa-solid fa-backward-step"></i></button>
           <button class="btn" onclick="playstop()">
             <i class="fa-solid fa-play" id="icon"></i>
           </button>
-          <button class="btn"><i class="fa-solid fa-forward-step"></i></button>
+          <button class="btn" onclick="playnext()"><i class="fa-solid fa-forward-step"></i></button>
         </div>
 
         <div class="mainbtns">
