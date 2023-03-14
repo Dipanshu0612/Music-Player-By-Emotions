@@ -169,11 +169,16 @@ let angryImage = [
   "song-images\\angry\\Dua Karo.jpeg",
 ];
 
+
+let angryArtist=["Divine, Ranveer Singh", "Big Dhillon, Anand Bhaskar, Jatinder Singh, Siddharth Basrur","Viruss","Amit Mishra, Shilpa Rao, Pritam", "Arijit Singh"]
+
 let allSongs = [...angry, ...happy, ...sad];
 
 let allimages = [...angryImage, ...happyImage, ...sadImage];
 
 let allSongName = [...angrySongName, ...happySongName, ...sadSongName];
+
+let allSingers=[...angryArtist,...happyArtist,...sadArtist];
 
 let songname = document.getElementById("song-name");
 let singer = document.getElementById("singer");
@@ -192,6 +197,7 @@ function random_play() {
     New = new Audio(allSongs[obj]);
     New.play();
     songname.innerText = allSongName[obj];
+    singer.innerText=allSingers[obj];
     icon.classList.add("fa-pause");
     icon.classList.remove("fa-play");
     curr_song.push(New);
@@ -201,6 +207,7 @@ function random_play() {
     New = new Audio(allSongs[obj]);
     New.play();
     songname.innerText = allSongName[obj];
+    singer.innerText=allSingers[obj];
     icon.classList.add("fa-pause");
     icon.classList.remove("fa-play");
     curr_song.push(New);
@@ -236,6 +243,8 @@ function emotionplay() {
         curr_song.pop();
         const New = new Audio(happy[Math.ceil(Math.random() * 8)]);
         New.play();
+        songname.innerText=happySongName[obj];
+        singer.innerText=happyArtist[obj];
         icon.classList.add("fa-pause");
         icon.classList.remove("fa-play");
         curr_song.push(New);
@@ -243,6 +252,8 @@ function emotionplay() {
       } else {
         const New = new Audio(happy[Math.ceil(Math.random() * 8)]);
         New.play();
+        songname.innerText=happySongName[obj];
+        singer.innerText=happyArtist[obj];
         icon.classList.add("fa-pause");
         icon.classList.remove("fa-play");
         curr_song.push(New);
@@ -255,6 +266,8 @@ function emotionplay() {
         document.getElementById("musicgif").style.display = "none";
         const New = new Audio(sad[Math.ceil(Math.random() * 3)]);
         New.play();
+        songname.innerText=sadSongName[obj];
+        singer.innerText=sadArtist[obj];
         icon.classList.add("fa-pause");
         icon.classList.remove("fa-play");
         curr_song.push(New);
@@ -262,6 +275,8 @@ function emotionplay() {
       } else {
         const New = new Audio(sad[Math.ceil(Math.random() * 3)]);
         New.play();
+        songname.innerText=sadSongName[obj];
+        singer.innerText=sadArtist[obj];
         icon.classList.add("fa-pause");
         icon.classList.remove("fa-play");
         document.getElementById("musicgif").style.display = "block";
@@ -275,6 +290,8 @@ function emotionplay() {
         document.getElementById("musicgif").style.display = "none";
         const New = new Audio(angry[Math.ceil(Math.random() * 2)]);
         New.play();
+        songname.innerText=angrySongName[obj];
+        singer.innerText=angryArtist[obj];
         icon.classList.add("fa-pause");
         icon.classList.remove("fa-play");
         curr_song.push(New);
@@ -282,6 +299,8 @@ function emotionplay() {
       } else {
         const New = new Audio(angry[Math.ceil(Math.random() * 2)]);
         New.play();
+        songname.innerText=angrySongName[obj];
+        singer.innerText=angryArtist[obj];
         icon.classList.add("fa-pause");
         icon.classList.remove("fa-play");
         curr_song.push(New);
@@ -300,13 +319,6 @@ async function getmood() {
     return mood;
 
 
-function playprev(){
-    let a=curr_song[0].src
-    console.log(a);
-}
-playprev();
 
-// for(i=0;i<allSongName.length;i++){
-//     if allSongs[i].contains()
-// }
+
 
