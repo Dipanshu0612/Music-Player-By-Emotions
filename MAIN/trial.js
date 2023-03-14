@@ -196,7 +196,7 @@ console.log('Hello');
 function random_play() {
   if (curr_song[0] != null) {
     curr_song[0].pause();
-    document.getElementById("musicgif").style.display = "none";
+    // document.getElementById("musicgif").style.display = "none";
     curr_song.pop();
     let obj = Math.ceil(Math.random() * allSongs.length);
     New = new Audio(allSongs[obj]);
@@ -209,7 +209,7 @@ function random_play() {
     icon.classList.add("fa-pause");
     icon.classList.remove("fa-play");
     curr_song.push(New);
-    document.getElementById("musicgif").style.display = "block";
+    // document.getElementById("musicgif").style.display = "block";
   } else {
     let obj = Math.ceil(Math.random() * allSongs.length);
     New = new Audio(allSongs[obj]);
@@ -222,7 +222,7 @@ function random_play() {
     icon.classList.add("fa-pause");
     icon.classList.remove("fa-play");
     curr_song.push(New);
-    document.getElementById("musicgif").style.display = "block";
+    // document.getElementById("musicgif").style.display = "block";
   }
 }
 
@@ -232,12 +232,12 @@ function playstop() {
     first_ele.pause();
     icon.classList.remove("fa-pause");
     icon.classList.add("fa-play");
-    document.getElementById("musicgif").style.display = "none";
+    // document.getElementById("musicgif").style.display = "none";
   } else {
     first_ele.play();
     icon.classList.add("fa-pause");
     icon.classList.remove("fa-play");
-    document.getElementById("musicgif").style.display = "block";
+    // document.getElementById("musicgif").style.display = "block";
   }
 }
 
@@ -250,7 +250,7 @@ function emotionplay() {
     if (e == "happy") {
       if (curr_song[0] != null) {
         curr_song[0].pause();
-        document.getElementById("musicgif").style.display = "none";
+        // document.getElementById("musicgif").style.display = "none";
         curr_song.pop();
         let obj=Math.ceil(Math.random() * 8);
         const New = new Audio(happy[obj]);
@@ -262,7 +262,7 @@ function emotionplay() {
         icon.classList.add("fa-pause");
         icon.classList.remove("fa-play");
         curr_song.push(New);
-        document.getElementById("musicgif").style.display = "block";
+        // document.getElementById("musicgif").style.display = "block";
       } else {
         let obj=Math.ceil(Math.random() * 8);
         const New = new Audio(happy[obj]);
@@ -274,13 +274,13 @@ function emotionplay() {
         icon.classList.add("fa-pause");
         icon.classList.remove("fa-play");
         curr_song.push(New);
-        document.getElementById("musicgif").style.display = "block";
+        // document.getElementById("musicgif").style.display = "block";
       }
     } else if (e == "sad") {
       if (curr_song[0] != null) {
         curr_song[0].pause();
         curr_song.pop();
-        document.getElementById("musicgif").style.display = "none";
+        // document.getElementById("musicgif").style.display = "none";
         let obj=Math.ceil(Math.random() * 3);
         const New = new Audio(sad[obj]);
         New.play();
@@ -291,7 +291,7 @@ function emotionplay() {
         icon.classList.add("fa-pause");
         icon.classList.remove("fa-play");
         curr_song.push(New);
-        document.getElementById("musicgif").style.display = "block";
+        // document.getElementById("musicgif").style.display = "block";
       } else {
         let obj=Math.ceil(Math.random() * 3);
         const New = new Audio(sad[obj]);
@@ -302,7 +302,7 @@ function emotionplay() {
         right=obj+1
         icon.classList.add("fa-pause");
         icon.classList.remove("fa-play");
-        document.getElementById("musicgif").style.display = "block";
+        // document.getElementById("musicgif").style.display = "block";
 
         curr_song.push(New);
       }
@@ -310,7 +310,7 @@ function emotionplay() {
       if (curr_song[0] != null) {
         curr_song[0].pause();
         curr_song.pop();
-        document.getElementById("musicgif").style.display = "none";
+        // document.getElementById("musicgif").style.display = "none";
         let obj=Math.ceil(Math.random() * 2);
         const New = new Audio(angry[obj]);
         New.play();
@@ -321,7 +321,7 @@ function emotionplay() {
         icon.classList.add("fa-pause");
         icon.classList.remove("fa-play");
         curr_song.push(New);
-        document.getElementById("musicgif").style.display = "block";
+        // document.getElementById("musicgif").style.display = "block";
       } else {
         let obj=Math.ceil(Math.random() * 2);
         const New = new Audio(angry[obj]);
@@ -333,7 +333,7 @@ function emotionplay() {
         icon.classList.add("fa-pause");
         icon.classList.remove("fa-play");
         curr_song.push(New);
-        document.getElementById("musicgif").style.display = "block";
+        // document.getElementById("musicgif").style.display = "block";
       }
     }
   });
@@ -349,7 +349,7 @@ function playprev(){
     if (curr_song[0] != null) {
         curr_song[0].pause();
         curr_song.pop();
-        document.getElementById("musicgif").style.display = "none";
+        // document.getElementById("musicgif").style.display = "none";
         const New=new Audio(allSongs[left]);
         New.play();
         songname.innerText=allSongName[left];
@@ -359,7 +359,7 @@ function playprev(){
         icon.classList.add("fa-pause");
         icon.classList.remove("fa-play");
         curr_song.push(New);
-        document.getElementById("musicgif").style.display = "block";
+        // document.getElementById("musicgif").style.display = "block";
     }
     else{
         const New=new Audio(allSongs[left]);
@@ -371,14 +371,14 @@ function playprev(){
         icon.classList.add("fa-pause");
         icon.classList.remove("fa-play");
         curr_song.push(New);
-        document.getElementById("musicgif").style.display = "block";
+        // document.getElementById("musicgif").style.display = "block";
     }
 }
 function playnext(){
     if (curr_song[0] != null) {
         curr_song[0].pause();
         curr_song.pop();
-        document.getElementById("musicgif").style.display = "none";
+        // document.getElementById("musicgif").style.display = "none";
         const New=new Audio(allSongs[right]);
         New.play();
         songname.innerText=allSongName[right];
@@ -388,7 +388,7 @@ function playnext(){
         icon.classList.add("fa-pause");
         icon.classList.remove("fa-play");
         curr_song.push(New);
-        document.getElementById("musicgif").style.display = "block";
+        // document.getElementById("musicgif").style.display = "block";
     }
     else{
         const New=new Audio(allSongs[right]);
@@ -400,7 +400,7 @@ function playnext(){
         icon.classList.add("fa-pause");
         icon.classList.remove("fa-play");
         curr_song.push(New);
-        document.getElementById("musicgif").style.display = "block";
+        // document.getElementById("musicgif").style.display = "block";
     }
 
 
