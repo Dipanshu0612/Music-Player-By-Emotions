@@ -193,7 +193,7 @@ let angryImage = [
 ];
 
 
-let angryArtist = ["Divine, Ranveer Singh", "Big Dhillon, Anand Bhaskar, Jatinder Singh, Siddharth Basrur", "Viruss", "Amit Mishra, Shilpa Rao, Pritam", "Arijit Singh"]
+let angryArtist = ["Divine, Ranveer Singh", "Viruss", "Amit Mishra, Shilpa Rao, Pritam", "Arijit Singh","Big Dhillon, Anand Bhaskar, Jatinder Singh, Siddharth Basrur"]
 
 let allSongs = [...angry, ...happy, ...sad];
 
