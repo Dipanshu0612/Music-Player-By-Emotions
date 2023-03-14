@@ -242,7 +242,7 @@ function playstop() {
 }
 
 function emotionplay() {
-  alert("Stay still against the camera!!");
+  alert("The camera will now take your picture to detect your emotion. Stand/Sit Still!");
   let mood = getmood().then(function (e) {
     console.log(e);
     document.getElementsByClassName("mood")[0].innerHTML =
