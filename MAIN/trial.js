@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 let happy = [
   "songs\\happy\\Aaj Se Teri.mp3",
   "songs\\happy\\Apna Bana Le.mp3",
@@ -48,6 +49,11 @@ let happySongName = [
   "The Humma Humma Song",
   "Zindagi",
 ];
+=======
+let happy = ["songs\\happy\\Aaj Se Teri.mp3","songs\\happy\\Apna Bana Le.mp3","songs\\happy\\Bad Boy.mp3","songs\\happy\\Dil Diyan Gallan.mp3","songs\\happy\\Dil Galti Kar Baitha Hai.mp3","songs\\happy\\Ghungroo.mp3","songs\\happy\\Girls Like You.mp3","songs\\happy\\Go Pagal.mp3","songs\\happy\\Haan Main Galat.mp3","songs\\happy\\Hawayein.mp3","songs\\happy\\Ik Tu Hai.mp3","songs\\happy\\Ik Vaari Aa.mp3","songs\\happy\\Jugnu.mp3","songs\\happy\\Kesariya.mp3","songs\\happy\\Khairiyat.mp3","songs\\happy\\Love Me Like You Do.mp3","songs\\happy\\Mai Hoon Sath Tere.mp3","songs\\happy\\Saturday Saturday.mp3","songs\\happy\\Swag Se Swagat.mp3","songs\\happy\\Sweetheart.mp3","songs\\happy\\The Humma Humma Song.mp3","songs\\happy\\Zindagi.mp3"]
+
+let happySongName=["Aaj Se Teri","Apna Bana Le","Bad Boy",'Dil Diyan Gallan',"Dil Galti Kar Baitha Hai","Ghungroo","Girls Like You","Go Pagal","Haan Mai Galat","Hawayein","Ik Tu Hai","Ik Vaari Aa","Jugnu","Kesariya","Khairiyat","Love Me Like You Do","Mai Hoon Sath Tere","Saturday Saturday","Swag Se Swagat","Sweetheart","The Humma Humma Song","Zindagi"];
+>>>>>>> 5b0c328899f8558b28c0ddd34f40543e9e07f224
 
 let happyImage = [
   "song-images\\happy\\Aaj se teri.jpg",
@@ -125,6 +131,7 @@ let sadImage = [
   "song-images\\sad\\Ye Ishq na ho.jpg",
 ];
 
+<<<<<<< HEAD
 let sadArtist = [
   "Jubin Nautiyal, Payal Dev",
   "B Prak",
@@ -142,6 +149,9 @@ let sadArtist = [
   "Krishan Kumar",
   "Prabhas, Pooja H",
 ];
+=======
+let sad = ["songs\\sad\\Dil Lauta Do.mp3","songs\\sad\\Dil Tod Ke.mp3","songs\\sad\\Ek Tarfa Reprise.mp3","songs\\sad\\Filhall.mp3","songs\\sad\\Humnava Mere.mp3","songs\\sad\\Mahi Mera Dil.mp3","songs\\sad\\Man Bharya 2.mp3","songs\\sad\\Phir Bhi Tumko Chahunga.mp3","songs\\sad\\Phir Se Zara.mp3","songs\\sad\\Roke Na Ruke Naina.mp3","songs\\sad\\Tera Ghata.mp3","songs\\sad\\Tujhe Kitna Chahein Aur.mp3","songs\\sad\\Tum Hi Aana.mp3","songs\\sad\\Wafa Na Raas Aayee.mp3","songs\\sad\\Ye Ishq Na Ho.mp3"]
+>>>>>>> 5b0c328899f8558b28c0ddd34f40543e9e07f224
 
 let angry = [
   "songs\\angry\\Apna Time Aaega.mp3",
@@ -173,8 +183,26 @@ let allimages = [...angryImage, ...happyImage, ...sadImage];
 
 let allSongName = [...angrySongName, ...happySongName, ...sadSongName];
 
+<<<<<<< HEAD
 let songname = document.getElementById("song-name");
 let singer = document.getElementById("singer");
+=======
+let angrySongName=["Apna Time Aaega","BamBholle","Bulleya","Dua Karo","Get Ready To Fight Again"];
+
+let angryImage=["song-images\\angry\\apna time aaega.jpeg","song-images\\angry\\Baaghi2.jpg","song-images\\angry\\bambholle.jpg","song-images\\angry\\Bulleya.jpg","song-images\\angry\\Dua Karo.jpeg"];
+
+
+
+let allSongs = [...angry,...happy,...sad]
+
+let allimages=[...angryImage,...happyImage,...sadImage];
+
+let allSongName=[...angrySongName,...happySongName,...sadSongName];
+
+
+let songname=document.getElementById('song-name');
+let singer=document.getElementById('singer');
+>>>>>>> 5b0c328899f8558b28c0ddd34f40543e9e07f224
 
 let curr_song = [];
 
@@ -182,6 +210,7 @@ let New;
 let icon = document.getElementById("icon");
 
 function random_play() {
+<<<<<<< HEAD
   if (curr_song[0] != null) {
     curr_song[0].pause();
     document.getElementById("musicgif").style.display = "none";
@@ -204,6 +233,35 @@ function random_play() {
     curr_song.push(New);
     document.getElementById("musicgif").style.display = "block";
   }
+=======
+    if (curr_song[0] != null) {
+        curr_song[0].pause();
+        document.getElementById('musicgif').style.display='none';
+        curr_song.pop();
+        let obj=Math.floor(Math.random() * (allSongs.length))
+        New = new Audio(allSongs[obj])
+        console.log(allSongs[obj] + obj)
+        New.play();
+        songname.innerText=allSongName[obj];
+        console.log(allSongName[obj] + obj)
+        icon.classList.add("fa-pause");
+        icon.classList.remove("fa-play");
+        curr_song.push(New);
+        document.getElementById('musicgif').style.display='block';
+
+    }
+    else {
+        let obj=Math.floor(Math.random() * (allSongs.length))
+        New = new Audio(allSongs[obj])
+        New.play();
+        songname.innerText=allSongName[obj];
+        icon.classList.add("fa-pause");
+        icon.classList.remove("fa-play");
+        curr_song.push(New);
+        document.getElementById('musicgif').style.display='block';
+
+    }
+>>>>>>> 5b0c328899f8558b28c0ddd34f40543e9e07f224
 }
 
 function playstop() {
@@ -222,6 +280,7 @@ function playstop() {
 }
 
 function emotionplay() {
+<<<<<<< HEAD
   alert("Stay still against the camera!!");
   let mood = getmood().then(function (e) {
     console.log(e);
@@ -285,11 +344,111 @@ function emotionplay() {
         curr_song.push(New);
         document.getElementById("musicgif").style.display = "block";
       }
+=======
+    alert("Stay still against the camera!!")
+    let mood = getmood().then(function (e) {
+        console.log(e);
+        document.getElementsByClassName('mood')[0].innerHTML = "You look " + e + " !";
+        if (e == "happy") {
+            if (curr_song[0] != null) {
+                curr_song[0].pause();
+                document.getElementById('musicgif').style.display='none';
+                curr_song.pop();
+                let obj=Math.floor(Math.random() * 8);
+                const New = new Audio(happy[obj])
+                New.play();
+                songname.innerText=happySongName[obj];
+                icon.classList.add("fa-pause");
+                icon.classList.remove("fa-play");
+                curr_song.push(New);
+                document.getElementById('musicgif').style.display='block';
+            }
+            else{
+                let obj=Math.floor(Math.random() * 8);
+                const New = new Audio(happy[obj])
+                New.play();
+                songname.innerText=happySongName[obj];
+                icon.classList.add("fa-pause");
+                icon.classList.remove("fa-play");
+                curr_song.push(New);
+                document.getElementById('musicgif').style.display='block';
+
+            }
+        }
+        else if (e == "sad") {
+            if (curr_song[0] != null) {
+                curr_song[0].pause();
+                curr_song.pop();
+                document.getElementById('musicgif').style.display='none';
+                let obj=Math.floor(Math.random() * 3);
+                const New = new Audio(sad[obj])
+                New.play();
+                songname.innerText=sadSongName[obj];
+                icon.classList.add("fa-pause");
+                icon.classList.remove("fa-play");
+                curr_song.push(New);
+                document.getElementById('musicgif').style.display='block';
+
+            }
+            else{
+                let obj=Math.floor(Math.random() * 3);
+                const New = new Audio(sad[obj])
+                New.play();
+                songname.innerText=sadSongName[obj];
+                icon.classList.add("fa-pause");
+                icon.classList.remove("fa-play");
+                document.getElementById('musicgif').style.display='block';
+
+                curr_song.push(New);
+            }
+        }
+        else if (e == "angry") {
+            if (curr_song[0] != null) {
+                curr_song[0].pause();
+                curr_song.pop();
+                document.getElementById('musicgif').style.display='none';
+                let obj=Math.floor(Math.random() * 2);
+                const New = new Audio(angry[obj])
+                New.play();
+                songname.innerText=angrySongName[obj];
+                icon.classList.add("fa-pause");
+                icon.classList.remove("fa-play");
+                curr_song.push(New);
+                document.getElementById('musicgif').style.display='block';
+            }
+            else{
+                let obj=Math.floor(Math.random() * 2);
+                const New = new Audio(angry[obj])
+                New.play();
+                songname.innerText=angrySongName[obj];
+                icon.classList.add("fa-pause");
+                icon.classList.remove("fa-play");
+                curr_song.push(New);
+                document.getElementById('musicgif').style.display='block';
+
+            }
+            
+        }
+        else if (e== "neutral"){
+            random_play();
+        }
+>>>>>>> 5b0c328899f8558b28c0ddd34f40543e9e07f224
     }
   });
 }
 
 async function getmood() {
+<<<<<<< HEAD
   let mood = await eel.getEmotion()();
   return mood;
 }
+=======
+    let mood = await eel.getEmotion()();
+    return mood;
+}
+
+
+// for(i=0;i<allSongName.length;i++){
+//     if allSongs[i].contains()
+// }
+>>>>>>> 5b0c328899f8558b28c0ddd34f40543e9e07f224
