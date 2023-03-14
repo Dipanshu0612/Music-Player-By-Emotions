@@ -186,7 +186,8 @@ async function getmood() {
     return mood;
 }
 
-
-// for(i=0;i<allSongName.length;i++){
-//     if allSongs[i].contains()
-// }
+function playprev(){
+    let a=curr_song[0].src
+    console.log(a);
+}
+playprev();
