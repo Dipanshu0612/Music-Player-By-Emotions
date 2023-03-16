@@ -105,8 +105,15 @@ section{
 .menubtn{
     display: none;
 }
+.imgCont{
+    margin-top: 4rem;
+}
+.imgCont img{
+    height: 300px;
+    width: 300px;
+}
 .imgnone{
-    display: none;
+    /* display: none; */
 }
 .player{
     display: flex;

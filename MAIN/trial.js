@@ -15,7 +15,7 @@ let happy = [
     "songs\\happy\\Kesariya.mp3",
     "songs\\happy\\Khairiyat.mp3",
     "songs\\happy\\Love Me Like You Do.mp3",
-    "songs\\happy\\Main Hoon Sath Tere.mp3",
+    "songs\\happy\\Main Hoon Saath Tere.mp3",
     "songs\\happy\\Saturday Saturday.mp3",
     "songs\\happy\\Swag Se Swagat.mp3",
     "songs\\happy\\Sweetheart.mp3",
@@ -228,7 +228,7 @@ function random_play() {
         right = obj + 1
         songname.innerText = allSongName[obj];
         singer.innerText = allSingers[obj];
-        mainImage.src = `${allimages[obj]}`;
+        mainImage.innerHTML=`<img src="${allimages[obj]}" alt="" >`;
         icon.classList.add("fa-pause");
         icon.classList.remove("fa-play");
         curr_song.push(New);
@@ -241,7 +241,7 @@ function random_play() {
         right = obj + 1
         songname.innerText = allSongName[obj];
         singer.innerText = allSingers[obj];
-        mainImage.src = `${allimages[obj]}`;
+        mainImage.innerHTML=`<img src="${allimages[obj]}" alt="" >`;
         icon.classList.add("fa-pause");
         icon.classList.remove("fa-play");
         curr_song.push(New);
